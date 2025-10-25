@@ -6,5 +6,14 @@ export default defineContentConfig({
 			type: "page",
 			source: "index.md",
 		}),
+		docs: defineCollection({
+			type: "page",
+			source: "docs/**/*.md",
+			schema: z.object({
+				icon: z.string(),
+				title: z.string(),
+				introduction: z.string(),
+			}),
+		}),
     },
 });

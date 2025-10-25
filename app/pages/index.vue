@@ -9,7 +9,9 @@
 				<div class="text-center">
 					<p>欢迎来到橙服 · 纯净不删档生存</p>
 					<p>我们致力于打造一个沉浸、生动、自由的 Minecraft 世界.</p>
-					<button class="btn btn-sm btn-neutral mt-4">🍊 服务器指北<icon name="gravity-ui:caret-right" /></button>
+					<button class="btn btn-sm btn-neutral mt-4">
+						<NuxtLink to="/docs" class="flex items-center">🍊 服务器指北<icon name="gravity-ui:caret-right" /></NuxtLink>
+					</button>
 				</div>
 			</div>
 
@@ -46,7 +48,7 @@
 			</aside>
 			<nav>
 				<h6 class="footer-title">Navigation</h6>
-				<a class="link link-hover">服务器指北</a>
+				<NuxtLink to="docs" class="link link-hover">服务器指北</NuxtLink>
 			</nav>
 			<nav>
 				<h6 class="footer-title">Social</h6>
