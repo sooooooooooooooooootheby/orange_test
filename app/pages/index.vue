@@ -9,9 +9,16 @@
 				<div class="text-center">
 					<p>欢迎来到橙服 · 纯净不删档生存</p>
 					<p>我们致力于打造一个沉浸、生动、自由的 Minecraft 世界.</p>
-					<button class="btn btn-sm btn-neutral mt-4">
-						<NuxtLink to="/docs" class="flex items-center">🍊 服务器指北<icon name="gravity-ui:caret-right" /></NuxtLink>
-					</button>
+					<div class="flex gap-1 justify-center">
+						<button class="btn btn-sm btn-neutral mt-4">
+							<NuxtLink to="/docs" class="flex items-center">
+								🍊 服务器指北<icon name="gravity-ui:caret-right" />
+							</NuxtLink>
+						</button>
+						<button class="btn btn-sm btn-neutral mt-4">
+							<NuxtLink to="/litebans" class="flex items-center">小黑屋</NuxtLink>
+						</button>
+					</div>
 				</div>
 			</div>
 
@@ -49,6 +56,7 @@
 			<nav>
 				<h6 class="footer-title">Navigation</h6>
 				<NuxtLink to="docs" class="link link-hover">服务器指北</NuxtLink>
+				<NuxtLink to="/litebans" class="link link-hover">小黑屋</NuxtLink>
 			</nav>
 			<nav>
 				<h6 class="footer-title">Social</h6>
