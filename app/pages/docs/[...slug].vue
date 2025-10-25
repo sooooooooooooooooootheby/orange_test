@@ -8,7 +8,10 @@
 			</div>
 			<ContentRenderer :value="content" class="max-w-full w-full" />
 		</div>
-		<div class="w-70 shrink-0 relative text-gray-500 pt-12" v-if="content.body && content.body.toc && content.body.toc.links.length >= 2">
+		<div
+			class="w-70 shrink-0 relative text-gray-500 pt-12"
+			v-if="content.body && content.body.toc && content.body.toc.links.length >= 2"
+		>
 			<div class="fixed">
 				<div class="flex items-center gap-1 mb-2">
 					<icon name="gravity-ui:list-ul" />
@@ -34,5 +37,10 @@ const { data: content } = await useAsyncData(route.path, () => queryCollection("
 
 definePageMeta({
 	layout: "docs",
+});
+
+useSeoMeta({
+	title: `${content.value?.title} | Orange Craft Mc`,
+	ogTitle: `${content.value?.title} | Orange Craft Mc`,
 });
 </script>
