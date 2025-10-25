@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "tailwindcss-pattern";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--color-oranges: #f8be82;
+}
