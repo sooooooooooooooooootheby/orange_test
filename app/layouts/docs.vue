@@ -1,7 +1,12 @@
 <template>
-	<div class="drawer drawer-open max-w-360 w-full mx-auto">
+	<div class="drawer md:drawer-open max-w-360 w-full mx-auto">
 		<input id="my-drawer-4" type="checkbox" class="drawer-toggle" checked />
-		<div class="drawer-content py-16 flex flex-col pl-16">
+		<div class="drawer-content py-16 max-md:pt-8 flex flex-col md:pl-16 max-md:px-4">
+			<div class="pb-4 md:hidden">
+				<label for="my-drawer-4" class="drawer-button flex items-center gap-1">
+					<icon name="gravity-ui:layout-side-content" />
+				</label>
+			</div>
 			<div class="breadcrumbs text-sm">
 				<ul>
 					<li><icon name="gravity-ui:folder" class="mr-1.5" />home</li>
@@ -11,7 +16,7 @@
 			<slot />
 		</div>
 
-		<div class="drawer-side *:bg-transparent is-drawer-close:overflow-visible">
+		<div class="drawer-side md:*:bg-transparent md:is-drawer-close:overflow-visible">
 			<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
 			<div
 				class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full is-drawer-open:p-2"

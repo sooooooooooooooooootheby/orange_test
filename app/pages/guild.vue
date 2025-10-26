@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full min-h-screen bg-gray-50 pattern-checks-xl text-gray-200">
-		<div class="max-w-2xl mx-auto py-24 text-gray-700">
+		<div class="max-w-2xl mx-auto py-24 text-gray-700 max-md:px-4">
 			<div class="prose mb-8">
 				<NuxtLink to="/" class="no-underline text-sm text-gray-700 flex items-center gap-1 mb-2">
 					<icon name="gravity-ui:arrow-uturn-ccw-left" />
@@ -40,8 +40,8 @@
 								</div>
 							</div>
 							<p>{{ item.description }}</p>
-							<div class="flex">
-								<div class="flex w-1/5 flex-col gap-0.5">
+							<div class="flex max-md:flex-wrap">
+								<div class="flex md:w-1/5 max-md:w-full max-md:mb-1 flex-col gap-0.5">
 									<span class="text-xs text-gray-400">评分</span>
 									<span
 										:class="{
@@ -52,19 +52,19 @@
 										>{{ item.score.toFixed(2) }}</span
 									>
 								</div>
-								<div class="flex w-1/5 flex-col gap-0.5">
+								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
 									<span class="text-xs text-gray-400">等级</span>
 									<span>{{ item.level }}</span>
 								</div>
-								<div class="flex w-1/5 flex-col gap-0.5">
+								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
 									<span class="text-xs text-gray-400">会员</span>
 									<span>{{ item.member_count }}</span>
 								</div>
-								<div class="flex w-1/5 flex-col gap-0.5">
+								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
 									<span class="text-xs text-gray-400">活跃</span>
 									<span>{{ item.prosperity_degree }}</span>
 								</div>
-								<div class="flex w-1/5 flex-col gap-0.5">
+								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
 									<span class="text-xs text-gray-400">资金</span>
 									<span>{{ item.money }}</span>
 								</div>

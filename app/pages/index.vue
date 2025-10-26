@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full h-auto pattern-dots-md text-orange-50 pt-28">
-		<div class="max-w-4xl min-h-screen mx-auto text-gray-600 flex flex-col gap-20">
+		<div class="max-w-4xl min-h-screen mx-auto text-gray-600 flex flex-col gap-20 max-md:px-4">
 			<div class="flex flex-col items-center justify-center gap-12">
 				<div class="flex items-center gap-2">
 					<img src="/logo.jpg" alt="logo" class="w-12" />
