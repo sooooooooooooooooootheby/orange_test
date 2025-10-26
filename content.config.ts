@@ -6,6 +6,10 @@ export default defineContentConfig({
 			type: "page",
 			source: "index.md",
 		}),
+		logs: defineCollection({
+			type: "page",
+			source: "logs.md",
+		}),
 		docs: defineCollection({
 			type: "page",
 			source: "docs/**/*.md",
