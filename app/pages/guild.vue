@@ -1,8 +1,8 @@
 <template>
-	<div class="w-full min-h-screen pattern-checks-xl text-base-content/10">
-		<div class="max-w-2xl mx-auto py-24 max-md:px-4">
+	<div class="pattern-checks-xl text-base-content/10 min-h-screen w-full">
+		<div class="mx-auto max-w-2xl py-24 max-md:px-4">
 			<div class="prose mb-8">
-				<NuxtLink to="/" class="no-underline text-sm text-base-content/75 flex items-center gap-1 mb-2">
+				<NuxtLink to="/" class="text-base-content/75 mb-2 flex items-center gap-1 text-sm no-underline">
 					<icon name="gravity-ui:arrow-uturn-ccw-left" />
 					回到首页
 				</NuxtLink>
@@ -27,23 +27,18 @@
 								<avatar :name="item.creator" :alt="item.creator" class="size-8" />
 								<div>
 									<p class="font-bold" v-html="toColoredHtml(item.guild_name)"></p>
-									<p class="text-sm text-base-content/76">
+									<p class="text-base-content/76 text-sm">
 										{{ item.creator }} -
-										<NuxtTime
-											locale="zh-CN"
-											year="numeric"
-											month="long"
-											day="numeric"
-											:datetime="item.create_time"
-										/>
+										<NuxtTime locale="zh-CN" year="numeric" month="long" day="numeric" :datetime="item.create_time" />
 									</p>
 								</div>
 							</div>
 							<p class="text-base-content">{{ item.description }}</p>
 							<div class="flex max-md:flex-wrap">
-								<div class="flex md:w-1/5 max-md:w-full max-md:mb-1 flex-col gap-0.5">
-									<span class="text-xs text-base-content/90">评分</span>
-									<span class="text-base-content/60"
+								<div class="flex flex-col gap-0.5 max-md:mb-1 max-md:w-full md:w-1/5">
+									<span class="text-base-content/90 text-xs">评分</span>
+									<span
+										class="text-base-content/60"
 										:class="{
 											'text-teal-500': index === 2,
 											'text-indigo-500': index === 1,
@@ -52,20 +47,20 @@
 										>{{ item.score.toFixed(2) }}</span
 									>
 								</div>
-								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-base-content/90">等级</span>
+								<div class="flex flex-col gap-0.5 max-md:w-1/4 md:w-1/5">
+									<span class="text-base-content/90 text-xs">等级</span>
 									<span class="text-base-content/60">{{ item.level }}</span>
 								</div>
-								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-base-content/90">会员</span>
+								<div class="flex flex-col gap-0.5 max-md:w-1/4 md:w-1/5">
+									<span class="text-base-content/90 text-xs">会员</span>
 									<span class="text-base-content/60">{{ item.member_count }}</span>
 								</div>
-								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-base-content/90">活跃</span>
+								<div class="flex flex-col gap-0.5 max-md:w-1/4 md:w-1/5">
+									<span class="text-base-content/90 text-xs">活跃</span>
 									<span class="text-base-content/60">{{ item.prosperity_degree }}</span>
 								</div>
-								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-base-content/90">资金</span>
+								<div class="flex flex-col gap-0.5 max-md:w-1/4 md:w-1/5">
+									<span class="text-base-content/90 text-xs">资金</span>
 									<span class="text-base-content/60">{{ item.money }}</span>
 								</div>
 							</div>
@@ -185,8 +180,7 @@ const data = ref({
 			score: 8189.2,
 		},
 		{
-			guild_name:
-				"&x&a&e&b&0&c&f🎐&x&b&6&a&2&c&9缘&x&b&e&9&4&c&3芯&x&c&6&8&6&b&e🌸&x&c&e&7&8&b&8苑&x&d&6&6&a&b&2依&x&d&d&5&d&a&cヅ",
+			guild_name: "&x&a&e&b&0&c&f🎐&x&b&6&a&2&c&9缘&x&b&e&9&4&c&3芯&x&c&6&8&6&b&e🌸&x&c&e&7&8&b&8苑&x&d&6&6&a&b&2依&x&d&d&5&d&a&cヅ",
 			description: "蟹蟹您的选择，喵~,敲敲群:【867145114】,依依在这里很想你哦@,苑逢芯恨晚，因缘奈无依",
 			level: 3,
 			money: 212,
@@ -212,8 +206,7 @@ const data = ref({
 			score: 15637.8,
 		},
 		{
-			guild_name:
-				"&x&f&f&2&1&c&e&l『&x&d&0&6&b&d&e✲&x&a&1&b&5&e&f&l夜&x&7&2&f&f&f&f&l梦&x&a&1&f&9&d&9&l阁&x&d&0&f&3&b&2✲&x&f&f&e&d&8&c&l』",
+			guild_name: "&x&f&f&2&1&c&e&l『&x&d&0&6&b&d&e✲&x&a&1&b&5&e&f&l夜&x&7&2&f&f&f&f&l梦&x&a&1&f&9&d&9&l阁&x&d&0&f&3&b&2✲&x&f&f&e&d&8&c&l』",
 			description: "夜有所思,日有所梦,夜梦阁欢迎广大玩家加入",
 			level: 3,
 			money: 5509,

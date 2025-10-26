@@ -11,8 +11,8 @@
 			</svg>
 		</div>
 		<div class="timeline-start mb-10 md:text-end">
-			<time class="font-mono italic text-base-content/75"><slot name="time" /></time>
-			<div class="text-lg font-black text-base-content"><slot name="title" /></div>
+			<time class="text-base-content/75 font-mono italic"><slot name="time" /></time>
+			<div class="text-base-content text-lg font-black"><slot name="title" /></div>
 			<div class="text-base-content/75"><slot name="content" /></div>
 		</div>
 		<hr />

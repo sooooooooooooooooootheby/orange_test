@@ -1,7 +1,7 @@
 <template>
-	<div class="drawer md:drawer-open max-w-360 w-full mx-auto">
+	<div class="drawer md:drawer-open mx-auto w-full max-w-360">
 		<input id="my-drawer-4" type="checkbox" class="drawer-toggle" checked />
-		<div class="drawer-content py-16 max-md:pt-8 flex flex-col md:pl-16 max-md:px-4">
+		<div class="drawer-content flex flex-col py-16 max-md:px-4 max-md:pt-8 md:pl-16">
 			<div class="pb-4 md:hidden">
 				<label for="my-drawer-4" class="drawer-button flex items-center gap-1">
 					<icon name="gravity-ui:layout-side-content" />
@@ -16,15 +16,13 @@
 			<slot />
 		</div>
 
-		<div class="drawer-side md:*:bg-transparent md:is-drawer-close:overflow-visible">
+		<div class="drawer-side md:is-drawer-close:overflow-visible md:*:bg-transparent">
 			<label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-			<div
-				class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full is-drawer-open:p-2"
-			>
-				<div class="w-full p-2 flex flex-col justify-center gap-3 is-drawer-close:justify-center py-4">
-					<div class="flex items-center gap-1 is-drawer-close:hidden">
+			<div class="is-drawer-close:w-14 is-drawer-open:w-64 bg-base-200 is-drawer-open:p-2 flex min-h-full flex-col items-start">
+				<div class="is-drawer-close:justify-center flex w-full flex-col justify-center gap-3 p-2 py-4">
+					<div class="is-drawer-close:hidden flex items-center gap-1">
 						<img src="/logo.jpg" alt="logo" class="w-5" />
-						<span class="font-bold text-base-content">OrangeCraft</span>
+						<span class="text-base-content font-bold">OrangeCraft</span>
 					</div>
 					<button class="btn btn-sm" @click="navigateTo('/')"><icon name="gravity-ui:house" />回到首页</button>
 				</div>
@@ -34,22 +32,14 @@
 							<summary>{{ item.title }}</summary>
 							<ul>
 								<li v-for="children in item.children">
-									<NuxtLink
-										:to="children.path"
-										class="is-drawer-close:hidden"
-										:class="{ 'menu-active': children.path === route.path }"
-										>{{ children.title }}</NuxtLink
-									>
+									<NuxtLink :to="children.path" class="is-drawer-close:hidden" :class="{ 'menu-active': children.path === route.path }">{{
+										children.title
+									}}</NuxtLink>
 								</li>
 							</ul>
 						</details>
-						<button
-							class="is-drawer-close:tooltip is-drawer-close:tooltip-right"
-							:class="{ 'menu-active': item.path === route.path }"
-							:data-tip="item.title"
-							v-else
-						>
-							<icon :name="item.icon" class="inline-block size-4 my-1.5" />
+						<button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" :class="{ 'menu-active': item.path === route.path }" :data-tip="item.title" v-else>
+							<icon :name="item.icon" class="my-1.5 inline-block size-4" />
 							<NuxtLink :to="item.path" class="is-drawer-close:hidden">{{ item.title }}</NuxtLink>
 						</button>
 					</li>

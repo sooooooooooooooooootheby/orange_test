@@ -2,7 +2,7 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
 	collections: {
-        index: defineCollection({
+		index: defineCollection({
 			type: "page",
 			source: "index.md",
 		}),
@@ -19,5 +19,5 @@ export default defineContentConfig({
 				introduction: z.string(),
 			}),
 		}),
-    },
+	},
 });
