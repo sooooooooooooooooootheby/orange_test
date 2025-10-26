@@ -29,4 +29,10 @@ export default defineNuxtConfig({
 		databaseDatabase: process.env.DB_NAME,
 		databaseCharset: process.env.DB_CHARSET,
 	},
+
+	content: {
+		preview: {
+			api: "https://api.nuxt.studio",
+		},
+	},
 });
