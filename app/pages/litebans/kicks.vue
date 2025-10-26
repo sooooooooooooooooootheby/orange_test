@@ -18,7 +18,7 @@
 			</select>
 			<ul class="flex flex-col gap-2">
 				<li v-for="item in filteredData">
-					<div class="card card-border bg-base-100 shadow-xs">
+					<div class="card card-border bg-base-100/25 shadow-xs backdrop-blur-md">
 						<div class="card-body">
 							<div class="flex items-center gap-4">
 								<avatar :name="item.name" :alt="item.name" class="size-12" />
