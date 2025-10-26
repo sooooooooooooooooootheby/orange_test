@@ -19,9 +19,9 @@
 						<button class="btn btn-sm btn-neutral mt-4">
 							<NuxtLink to="/guild" class="flex items-center">公会</NuxtLink>
 						</button>
-						<button class="btn btn-sm btn-neutral mt-4">
+						<!-- <button class="btn btn-sm btn-neutral mt-4">
 							<NuxtLink to="/logs" class="flex items-center">服务器日志</NuxtLink>
-						</button>
+						</button> -->
 					</div>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 				<NuxtLink to="docs" class="link link-hover">服务器指北</NuxtLink>
 				<NuxtLink to="/litebans" class="link link-hover">小黑屋</NuxtLink>
 				<NuxtLink to="/guild" class="link link-hover">公会</NuxtLink>
-				<NuxtLink to="/logs" class="link link-hover">服务器日志</NuxtLink>
+				<!-- <NuxtLink to="/logs" class="link link-hover">服务器日志</NuxtLink> -->
 			</nav>
 			<nav>
 				<h6 class="footer-title">Social</h6>
