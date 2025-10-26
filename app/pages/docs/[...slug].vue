@@ -1,10 +1,10 @@
 <template>
 	<div class="flex w-full" v-if="content">
 		<div class="md:pr-6 prose max-w-full w-full">
-			<div class="pt-8 text-gray-700 border-b border-gray-200">
+			<div class="pt-8 text-base-content border-b border-base-content/10">
 				<icon :name="content.icon" class="text-6xl mb-2" />
 				<h1>{{ content.title }}</h1>
-				<p class="text-gray-700/75">{{ content.introduction }}</p>
+				<p class="text-base-content/75">{{ content.introduction }}</p>
 			</div>
 			<div
 				class="w-full text-gray-500 pt-12 md:hidden"
@@ -16,7 +16,7 @@
 						<span class="text-sm font-bold">On This Page</span>
 					</div>
 					<div class="text-sm flex">
-						<div class="border-l-2 border-gray-200 mx-2"></div>
+						<div class="border-l-2 border-base-content/10 mx-2"></div>
 						<ul class="flex flex-col gap-2 list-none m-0! p-0">
 							<li v-for="item in content.body.toc.links">
 								<NuxtLink :to="`#${item.id}`" class="no-underline">{{ item.text }}</NuxtLink>
@@ -37,7 +37,7 @@
 					<p class="text-sm font-bold">On This Page</p>
 				</div>
 				<div class="text-sm flex">
-					<div class="border-l-2 border-gray-200 mx-2"></div>
+					<div class="border-l-2 border-base-content/10 mx-2"></div>
 					<ul class="flex flex-col gap-2">
 						<li v-for="item in content.body.toc.links">
 							<NuxtLink :to="`#${item.id}`">{{ item.text }}</NuxtLink>

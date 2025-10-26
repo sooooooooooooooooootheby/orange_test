@@ -23,13 +23,13 @@
 							<div class="flex items-center gap-4">
 								<avatar :name="item.name" :alt="item.name" class="size-12" />
 								<div>
-									<p class="font-bold text-gray-700">{{ item.name }}</p>
-									<p class="font-xs text-gray-600/75">{{ item.uuid }}</p>
+									<p class="font-bold text-base-content">{{ item.name }}</p>
+									<p class="font-xs text-base-content/75">{{ item.uuid }}</p>
 								</div>
 							</div>
 							<div>
-								<p>累计踢出次数: {{ item.kick_count }}</p>
-								<ul class="list-disc ml-5 text-gray-400">
+								<p class="text-base-content">累计踢出次数: {{ item.kick_count }}</p>
+								<ul class="list-disc ml-5 text-base-content/75">
 									<li v-for="items in item.kick">{{ items.reason }} x{{ items.reason_count }}</li>
 								</ul>
 							</div>

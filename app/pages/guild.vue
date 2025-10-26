@@ -1,8 +1,8 @@
 <template>
-	<div class="w-full min-h-screen bg-gray-50 pattern-checks-xl text-gray-200">
-		<div class="max-w-2xl mx-auto py-24 text-gray-700 max-md:px-4">
+	<div class="w-full min-h-screen pattern-checks-xl text-base-content/10">
+		<div class="max-w-2xl mx-auto py-24 max-md:px-4">
 			<div class="prose mb-8">
-				<NuxtLink to="/" class="no-underline text-sm text-gray-700 flex items-center gap-1 mb-2">
+				<NuxtLink to="/" class="no-underline text-sm text-base-content/75 flex items-center gap-1 mb-2">
 					<icon name="gravity-ui:arrow-uturn-ccw-left" />
 					回到首页
 				</NuxtLink>
@@ -27,7 +27,7 @@
 								<avatar :name="item.creator" :alt="item.creator" class="size-8" />
 								<div>
 									<p class="font-bold" v-html="toColoredHtml(item.guild_name)"></p>
-									<p class="text-sm text-gray-600/76">
+									<p class="text-sm text-base-content/76">
 										{{ item.creator }} -
 										<NuxtTime
 											locale="zh-CN"
@@ -39,11 +39,11 @@
 									</p>
 								</div>
 							</div>
-							<p>{{ item.description }}</p>
+							<p class="text-base-content">{{ item.description }}</p>
 							<div class="flex max-md:flex-wrap">
 								<div class="flex md:w-1/5 max-md:w-full max-md:mb-1 flex-col gap-0.5">
-									<span class="text-xs text-gray-400">评分</span>
-									<span
+									<span class="text-xs text-base-content/90">评分</span>
+									<span class="text-base-content/60"
 										:class="{
 											'text-teal-500': index === 2,
 											'text-indigo-500': index === 1,
@@ -53,20 +53,20 @@
 									>
 								</div>
 								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-gray-400">等级</span>
-									<span>{{ item.level }}</span>
+									<span class="text-xs text-base-content/90">等级</span>
+									<span class="text-base-content/60">{{ item.level }}</span>
 								</div>
 								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-gray-400">会员</span>
-									<span>{{ item.member_count }}</span>
+									<span class="text-xs text-base-content/90">会员</span>
+									<span class="text-base-content/60">{{ item.member_count }}</span>
 								</div>
 								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-gray-400">活跃</span>
-									<span>{{ item.prosperity_degree }}</span>
+									<span class="text-xs text-base-content/90">活跃</span>
+									<span class="text-base-content/60">{{ item.prosperity_degree }}</span>
 								</div>
 								<div class="flex md:w-1/5 max-md:w-1/4 flex-col gap-0.5">
-									<span class="text-xs text-gray-400">资金</span>
-									<span>{{ item.money }}</span>
+									<span class="text-xs text-base-content/90">资金</span>
+									<span class="text-base-content/60">{{ item.money }}</span>
 								</div>
 							</div>
 						</div>

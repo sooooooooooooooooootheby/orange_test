@@ -1,14 +1,14 @@
 <template>
-	<div class="w-full h-auto pattern-dots-md text-orange-50 pt-28">
+	<div class="w-full h-auto pattern-dots-md text-base-content/10 pt-28">
 		<div class="max-w-4xl min-h-screen mx-auto text-gray-600 flex flex-col gap-20 max-md:px-4">
 			<div class="flex flex-col items-center justify-center gap-12">
 				<div class="flex items-center gap-2">
 					<img src="/logo.jpg" alt="logo" class="w-12" />
-					<span class="font-bold text-3xl text-gray-700">OrangeCraft</span>
+					<span class="font-bold text-3xl text-base-content">OrangeCraft</span>
 				</div>
 				<div class="text-center">
-					<p>欢迎来到橙服 · 纯净不删档生存</p>
-					<p>我们致力于打造一个沉浸、生动、自由的 Minecraft 世界.</p>
+					<p class="text-base-content/80">欢迎来到橙服 · 纯净不删档生存</p>
+					<p class="text-base-content/80">我们致力于打造一个沉浸、生动、自由的 Minecraft 世界.</p>
 					<div class="flex gap-1 justify-center">
 						<button class="btn btn-sm btn-neutral mt-4">
 							<NuxtLink to="/docs" class="flex items-center">

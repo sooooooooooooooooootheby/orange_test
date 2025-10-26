@@ -14,13 +14,13 @@
 						<div class="flex items-center gap-4">
 							<avatar :name="item.name" :alt="item.name" class="size-12" />
 							<div>
-								<p class="font-bold text-gray-700">{{ item.name }}</p>
-								<p class="font-xs text-gray-600/75">{{ item.uuid }}</p>
+								<p class="font-bold text-base-content">{{ item.name }}</p>
+								<p class="font-xs text-base-content/75">{{ item.uuid }}</p>
 							</div>
 						</div>
 						<div class="flex items-center gap-1">
 							<avatar :name="item.banned_by_name" :alt="item.name" fallback="Console" class="size-8" />
-							<span class="font-bold text-gray-700/75">
+							<span class="font-bold text-base-content">
 								{{ item.banned_by_name }} -
 								<NuxtTime
 									locale="zh-CN"
@@ -33,7 +33,7 @@
 								/>
 							</span>
 						</div>
-						<p class="text-sm text-gray-400 dark:text-gray-600">{{ item.reason }}</p>
+						<p class="text-sm text-base-content/75">{{ item.reason }}</p>
 						<div class="mt-2 flex items-center gap-1">
 							<div class="badge badge-soft badge-sm badge-error" v-if="item.until === 0">永久封禁</div>
 							<div

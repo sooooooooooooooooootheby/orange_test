@@ -24,7 +24,7 @@
 				<div class="w-full p-2 flex flex-col justify-center gap-3 is-drawer-close:justify-center py-4">
 					<div class="flex items-center gap-1 is-drawer-close:hidden">
 						<img src="/logo.jpg" alt="logo" class="w-5" />
-						<span class="font-bold text-gray-700">OrangeCraft</span>
+						<span class="font-bold text-base-content">OrangeCraft</span>
 					</div>
 					<button class="btn btn-sm" @click="navigateTo('/')"><icon name="gravity-ui:house" />回到首页</button>
 				</div>
